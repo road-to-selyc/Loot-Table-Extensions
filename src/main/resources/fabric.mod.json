@@ -1,0 +1,17 @@
+{
+  "id": "lte",
+  "name": "Loot Table Extensions",
+  "description": "Loot Table Conditions that enable more logical operations",
+  "version": "0.0.1",
+  "side": "universal",
+  "initializers": ["lte.LootTableExtensions"],
+  "requires": {
+    "fabric": "*",
+    "fabric-language-scala": "*"
+  },
+  "languageAdapter": "net.fabricmc.language.scala.ScalaLanguageAdapter",
+  "mixins": {
+    "client": "lte.client.json",
+    "common": "lte.common.json"
+  }
+}
