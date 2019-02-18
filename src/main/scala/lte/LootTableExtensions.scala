@@ -20,28 +20,8 @@ class LootTableExtensions extends ModInitializer {
 		LootConditions.register(LootConditionFactory.create[Implication](new Identifier("lte", "implies")))
 		LootConditions.register(LootConditionFactory.create[InvertedConjunction](new Identifier("lte", "not_all")))
 		LootConditions.register(LootConditionFactory.create[InvertedDisjunction](new Identifier("lte", "none_of")))
-
-		case class True() extends LootCondition {
-			def test(context: LootContext): Boolean = true
-		}
-
-		case class False() extends LootCondition {
-			def test(Context: LootContext): Boolean = false
-		}
-
-		val trueFac = new LootCondition.Factory[True](new Identifier("lte", "always"), classOf[True]) {
-			def toJson(var1: JsonObject, var2: True, var3: JsonSerializationContext): Unit = ()
-			def fromJson(var1: JsonObject, var2: JsonDeserializationContext): True = True()
-		}
-
-		val falseFac = new LootCondition.Factory[False](new Identifier("lte","never"), classOf[False]) {
-			def toJson(var1: JsonObject, var2: False, var3: JsonSerializationContext): Unit = ()
-			def fromJson(var1: JsonObject, var2: JsonDeserializationContext): False = False()
-		}
-
-		LootConditions.register(trueFac)
-		LootConditions.register(falseFac)
-
+		LootConditions.register(Always.factory)
+		LootConditions.register(Never.factory)
 		LootFunctions.register(Composed.factory)
 
 	}
