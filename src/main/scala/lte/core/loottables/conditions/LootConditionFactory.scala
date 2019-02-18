@@ -1,15 +1,13 @@
-package lte.core.loottables
+package lte.core.loottables.conditions
 
 import com.google.gson.{JsonDeserializationContext, JsonObject, JsonSerializationContext}
-import lte.core.loottables.conditions.LootConditionLogicalConnective
+import lte.util.gson.GsonUtilities._
+import lte.util.json.ModJsonInstances._
 import net.minecraft.util.Identifier
 import net.minecraft.world.loot.condition.LootCondition
+import play.api.libs.json._
 
 import scala.reflect._
-import lte.util.json.ModJsonInstances._
-import lte.util.gson.GsonUtilities._
-import net.minecraft.world.loot.function.{ConditionalLootFunction, LootFunction}
-import play.api.libs.json._
 
 object LootConditionFactory {
 	implicit def reads[T <: LootCondition : LootConditionLogicalConnective](implicit lc: Reads[LootCondition]): Reads[T] = {

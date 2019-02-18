@@ -1,7 +1,6 @@
 package lte
 
 import com.google.gson.{JsonDeserializationContext, JsonObject, JsonSerializationContext}
-import lte.core.loottables.LootConditionFactory
 import lte.core.loottables.conditions._
 import lte.core.loottables.functions.Composed
 import net.fabricmc.api.ModInitializer
@@ -9,7 +8,6 @@ import net.minecraft.util.Identifier
 import net.minecraft.world.loot.condition.{LootCondition, LootConditions}
 import net.minecraft.world.loot.context.LootContext
 import net.minecraft.world.loot.function.LootFunctions
-//import LootConditionFactory.formats
 
 class LootTableExtensions extends ModInitializer {
 	def onInitialize(): Unit = {
