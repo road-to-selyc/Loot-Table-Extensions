@@ -1,7 +1,6 @@
 package lte.core.loottables.functions
 
 import com.google.gson.{JsonDeserializationContext, JsonObject, JsonSerializationContext}
-import lte.core.loottables.conditions.LootConditionLogicalConnective
 import net.minecraft.item.ItemStack
 import net.minecraft.util.Identifier
 import net.minecraft.world.loot.condition.LootCondition
