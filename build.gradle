@@ -17,13 +17,12 @@ dependencies {
 	minecraft "com.mojang:minecraft:19w07a"
 	mappings "net.fabricmc:yarn:19w07a.12"
 	modCompile "net.fabricmc:fabric-loader:0.3.6.107"
+
 	compile "net.fabricmc:fabric-language-scala:0.1.0.+"
 	compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modCompile "net.fabricmc:fabric:0.2.1.95"
-	// https://mvnrepository.com/artifact/org.typelevel/cats-core
-	compile group: 'org.typelevel', name: 'cats-core_2.12', version: '1.6.0'
+	modCompile "net.fabricmc:fabric:0.2.1.97"
 
 	// https://mvnrepository.com/artifact/com.typesafe.play/play-json
 	compile group: 'com.typesafe.play', name: 'play-json_2.12', version: '2.7.1'
