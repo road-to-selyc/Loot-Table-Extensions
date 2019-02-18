@@ -1,10 +1,6 @@
 package lte.core.loottables.conditions
 
 import net.minecraft.world.loot.condition.LootCondition
-import net.minecraft.world.loot.context.LootContext
-
-import play.api.libs.json._
-import play.api.libs.functional.syntax._
 
 trait LootConditionLogicalConnective[T <: LootCondition] {
 	def connective(terms: List[LootCondition]): T

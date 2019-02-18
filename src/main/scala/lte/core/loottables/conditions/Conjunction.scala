@@ -1,6 +1,5 @@
 package lte.core.loottables.conditions
 
-import cats.Id
 import net.minecraft.world.loot.condition.LootCondition
 import net.minecraft.world.loot.context.LootContext
 

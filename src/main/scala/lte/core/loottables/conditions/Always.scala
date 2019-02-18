@@ -2,7 +2,6 @@ package lte.core.loottables.conditions
 
 import net.minecraft.world.loot.condition.LootCondition
 import net.minecraft.world.loot.context.LootContext
-import LootConditionLogicalConnective._
 import com.google.gson.{JsonDeserializationContext, JsonObject, JsonSerializationContext}
 import net.minecraft.util.Identifier
 

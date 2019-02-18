@@ -1,12 +1,10 @@
 package lte
 
-import com.google.gson.{JsonDeserializationContext, JsonObject, JsonSerializationContext}
 import lte.core.loottables.conditions._
 import lte.core.loottables.functions.Composed
 import net.fabricmc.api.ModInitializer
 import net.minecraft.util.Identifier
-import net.minecraft.world.loot.condition.{LootCondition, LootConditions}
-import net.minecraft.world.loot.context.LootContext
+import net.minecraft.world.loot.condition.LootConditions
 import net.minecraft.world.loot.function.LootFunctions
 
 class LootTableExtensions extends ModInitializer {
@@ -23,6 +21,5 @@ class LootTableExtensions extends ModInitializer {
 		LootConditions.register(Always.factory)
 		LootConditions.register(Never.factory)
 		LootFunctions.register(Composed.factory)
-
 	}
 }
